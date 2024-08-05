@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle  --outdir=dist --platform=node --sourcemap",
+    "watch:build": "esbuild src/main.ts --bundle --outdir=dist --platform=node --sourcemap --watch",
+    "start": "node ./dist/main.js",
+    "dev": "concurrently \"npm run watch:build\" \"nodemon ./dist/main.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.23.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
